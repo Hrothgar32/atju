@@ -22,10 +22,13 @@ class Task{
         void setNode(Node* treeNode);
         void setXCoord(int x_coord);
         void setYCoord(int y_coord);
+        void setVRunTime(int vruntime);
+        void setLevel(int level);
         int getXCoord();
         int getYCoord();
         void initLevel();
         int getLevel();
+        int getPTime();
 };
 
 

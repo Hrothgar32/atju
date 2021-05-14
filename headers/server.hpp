@@ -31,10 +31,12 @@ class Server{
         std::unordered_map<int, std::shared_ptr<Task>> tasks;
         void insertTask(const std::shared_ptr<Task>& task);
         void removeTask(int pid);
+        void runTask();
         void updateOwners();
     public:
         Server(RbTree* tree, std::mutex* mutex, Drawer* drawer);
-        void listen_runnable();
+        void listenRunnable();
+        void runTaskRunnable();
 };
 
 

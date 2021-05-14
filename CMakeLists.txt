@@ -19,7 +19,7 @@ include_directories(./asio-1.18.1/include)
 
 include_directories(headers)
 add_library(drawer SHARED drawer.cpp rbtree.cpp node.cpp)
-target_link_libraries(drawer /usr/lib/libgraph.so)
+target_link_libraries(drawer libSDL_bgi.so)
 add_library(server SHARED server.cpp rbtree.cpp task.cpp node.cpp)
 target_link_libraries(server drawer ${CMAKE_THREAD_LIBS_INIT})
 add_executable(atju main.cpp rbtree.cpp)

@@ -23,6 +23,10 @@ void Task::setNode(Node* treeNode){
     this->treeNode = treeNode;
 }
 
+void Task::setVRunTime(int vruntime){
+    this->vruntime = vruntime;
+}
+
 int Task::getPid(){
     return pid;
 }
@@ -43,6 +47,10 @@ int Task::getLevel(){
     return level;
 }
 
+void Task::setLevel(int level){
+    this->level = level;
+}
+
 void Task::setYCoord(int y_coord){
     this->y_coord = y_coord;
 }
@@ -57,4 +65,8 @@ int Task::getYCoord(){
 
 int Task::getVRuntime(){
     return vruntime;
+}
+
+int Task::getPTime(){
+    return pTime;
 }

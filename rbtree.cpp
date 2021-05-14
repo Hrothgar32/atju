@@ -1,5 +1,6 @@
 #include "rbtree.hpp"
 #include "node.hpp"
+#include <memory>
 #include <type_traits>
 #include <utility>
 #include <queue>
@@ -65,7 +66,7 @@ Node* RbTree::insert(Node *root, Node* newNode){
     return root;
 }
 
-void RbTree::fixTreeAfterInsert(Node*& root, Node*& newNode){
+void RbTree::fixTreeAfterInsert(Node*& root, Node* newNode){
     Node* parent = nullptr;
     Node* grand_parent = nullptr;
     while((newNode != root) && (newNode->color != BLACK) &&
@@ -121,7 +122,11 @@ Node* RbTree::rbInsert(const int& key){
     Node* newNode = new Node(key);
     root = insert(root, newNode);
     fixTreeAfterInsert(root, newNode);
-    return search(key);
+    if(minNode == nullptr)
+        minNode = newNode;
+    else if(newNode->key < minNode->key)
+        minNode = newNode;
+    return newNode;
 }
 
 Node* RbTree::search(const int& key){
@@ -297,4 +302,14 @@ std::vector<Node*> RbTree::getLevelOrder(){
 
 Node* RbTree::getRoot(){
     return root;
+}
+
+std::shared_ptr<void> RbTree::popMin(){
+    if(minNode == nullptr)
+        return nullptr;
+    Node* parent = minNode->parent;
+    std::shared_ptr<void> data = minNode->data;
+    rbDelete(minNode);
+    minNode = parent;
+    return data;
 }

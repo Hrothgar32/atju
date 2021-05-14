@@ -24,6 +24,7 @@ void Server::insertTask(const std::shared_ptr<Task>& task){
     task->setNode(taskToInsert);
     task->initLevel();
     mutex->unlock();
+    drawer->callReDraw();
 }
 
 void Server::removeTask(int pid){
@@ -33,25 +34,51 @@ void Server::removeTask(int pid){
     tasks.erase(pid);
     updateOwners();
     mutex->unlock();
+    drawer->callReDraw();
 }
 
-void Server::listen_runnable(){
+void Server::runTask(){
+    mutex->lock();
+    auto task = std::static_pointer_cast<Task>(tree->popMin());
+    mutex->unlock();
+    if(task != nullptr){
+        drawer->setRunningTask(task);
+        drawer->callReDraw();
+        int currentVrunTime = task->getVRuntime();
+        int pTime = task->getPTime();
+        std::this_thread::sleep_for(std::chrono::seconds(pTime));
+        task->setVRunTime(currentVrunTime + task->getPTime());
+        mutex->lock();
+        tasks.emplace(std::make_pair(task->getPid(), task));
+        mutex->unlock();
+        insertTask(task);
+    }
+    else{
+        drawer->setRunningTask(nullptr);
+    }
+}
+
+void Server::runTaskRunnable(){
+    while(shouldRun){
+        runTask();
+    }
+}
+
+void Server::listenRunnable(){
     while(shouldRun){
         udp::endpoint sender;
         serverSocket.receive_from(asio::buffer(buffer), sender);
         switch(message.type){
             case KILL:{
                 removeTask(message.pTime);
-                drawer->callReDraw();
                 break;
             }
             case PROGRAM:{
                 pidCount++;
                 std::string programName(message.programName);
-                auto newTask = std::make_shared<Task>(pidCount, programName, message.pTime, pidCount);
+                auto newTask = std::make_shared<Task>(pidCount, programName, message.pTime, 0);
                 tasks.insert(std::make_pair(pidCount, newTask));
                 insertTask(newTask);
-                drawer->callReDraw();
                 break;
             }
             case PS:
