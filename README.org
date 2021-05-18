@@ -1,0 +1,73 @@
+#+TITLE: Álmos Tökéletesen Jóarc Ütemezője
+
+* Telepítési útmutató
+
+A projekt egyelőre sajnos csak GNU/Linux rendszereken futtatható.
+** Dependenciák
+*** SDL_BGI
+Az SDL_bgi könyvtár implementálja a graphics.h headerben található funkciókat.
+Hogy telepítsd a könyvtárat, kövesd [[http://libxbgi.sourceforge.net/][ezen a linken]] található utasításokat.
+*** CMake
+A projekt build rendszere a CMake, mely megtalálható a legtöbb közismert
+GNU/Linux disztribúció packagei között.
+
+**** Arch Linux
+
+#+begin_src shell
+sudo pacman -S cmake
+#+end_src
+
+**** Ubuntu
+Ha engedélyezve vannak a snap packagek, telepítheted a CMaket ezzel az egyszerű
+paranccsal:
+#+begin_src shell
+sudo snap install cmake
+#+end_src
+
+**** Fedora
+
+#+begin_src shell
+sudo dnf install cmake
+#+end_src
+**** Más disztribúciók, módszerek
+
+Kövesd a [[https://cmake.org/install/][hivatalos CMake telepítési útmutatót]].
+** Projekt lebuildelése
+
+Futtasd a következő parancsot a projekt gyökérkönyvtárában (ahol a main.cpp van):
+
+#+begin_src shell
+cmake -S . -B build/ -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug && cmake --build build/
+#+end_src
+
+* Futtatás
+** Szerver és GUI futtatása
+A projekt gyökérkönyvtárában futtasd a következő parancsot:
+
+#+begin_src shell
+./build/Debug/atju
+#+end_src
+
+** Kliens futtatása
+A projekt gyökérkönyvtárában futtasd a következő parancsot:
+
+#+begin_src shell
+./build/Debug/client
+#+end_src
+
+* Projekt leírása
+
+ATJU egy szimuláció, ami vizualizálja a Linux kernel folyamatütemezőjét, a Completely Fair
+Schedulert.
+
+A felhasználó programokat képes indítani és megölni, melyek megjelennek a szerver által
+kirajzolt piros-fekete fában.
+
+A felhasználó a szerver és kliens elindítása után egy kvázi *shell* környezetet kap a kliensben, ahol egyelőre négy parancs található:
+
+- *kill* [PID] -- "megöli" az adott PID-del rendelkező folyamatot.
+- *program* [program_nev] [program_futasi_ido] -- elindítja a [program_nev] folyamatot,
+                                                  mely [program_futasi_ido]-t fut
+                                                  iterációnként
+- *clear* -- hasonlóan működik mint a UNIX clear parancs, megtisztítja a képernyőt.
+- *exit* -- kilép a kliensből, ha fut a szerver, megöli a szervert.
