@@ -72,8 +72,8 @@ void RbTree::fixTreeAfterInsert(Node*& root, Node* newNode){
     while((newNode != root) && (newNode->color != BLACK) &&
           (newNode->parent->color == RED)){
               parent = newNode->parent;
+              // A. eset: a szülő a nagyszülőnek bal gyermeke.
               grand_parent = newNode->parent->parent;
-
               if(parent == grand_parent->left){
                   Node* uncle = grand_parent->right;
                   if(uncle != nullptr && uncle->color == RED){
@@ -83,32 +83,36 @@ void RbTree::fixTreeAfterInsert(Node*& root, Node* newNode){
                       newNode = grand_parent;
                   }
                   else{
+                    //Bal-jobb eset: Átalakítjuk egy balforgatással egy bal-bal esetre.
                      if(newNode == parent->right){
                         rotateLeft(root, parent);
                         newNode = parent;
                         parent = newNode->parent;
                      }
+                     // Bal-bal eset
                      rotateRight(root, grand_parent);
                      std::swap(parent->color, grand_parent->color);
                      newNode = parent;
                   }
               }
               else{
+                  //B. eset: a szülő a nagyszülőnek jobb gyermeke.
                   Node* uncle = grand_parent->left;
-
+                  //Ha a nagybácsi piros, akkor egy átszínezéssel megvagyunk.
                   if(uncle != nullptr && uncle->color == RED){
                       grand_parent->color = RED;
                       parent->color = BLACK;
                       uncle->color = BLACK;
                       newNode = grand_parent;
                   }
-
                   else{
+                    //Jobb-bal eset: Átalakítjuk egy jobbforgatással egy jobb-jobb esetre.
                      if(newNode == parent->left){
                         rotateRight(root, parent);
                         newNode = parent;
                         parent = newNode->parent;
                      }
+                     //Jobb-jobb eset
                      rotateLeft(root, grand_parent);
                      std::swap(parent->color, grand_parent->color);
                      newNode = parent;
@@ -166,15 +170,19 @@ void RbTree::rbDelete(Node* node){
     bool bothBlack = (( u == nullptr || u->color == BLACK ) && node->color == BLACK);
     Node* parent = node->parent;
 
+    // A leváltó csúcs nullptr.tehát node egy levél.
     if(u == nullptr){
         if(node == root){
           root = nullptr;
         }
         else{
+            //A levél fekete ezért a nullptr, ami leváltja, duplafekete lesz.
             if(bothBlack)
                 fixDoubleBlack(node);
             else{
                 Node* sibling = node->sibling();
+                //Mivel a node csúcs levél, ezért ahhoz, hogy uniform maradjon a fekete
+                //magasság, a testvére (ha nem nullptr) feltétlen piros kell legyen.
                 if(sibling != nullptr)
                     sibling->color = RED;
             }
@@ -186,6 +194,7 @@ void RbTree::rbDelete(Node* node){
         delete node;
     }
     else{
+        // Nodenak egy gyereke van.
         if(node->left == nullptr || node->right == nullptr){
             if(node == root){
                 node->key = u->key;
@@ -202,14 +211,18 @@ void RbTree::rbDelete(Node* node){
                 }
                 delete node;
                 u->parent = parent;
+                // A leváltó is fekete, fel kell oldjuk a dupla-feketét.
                 if(bothBlack){
                     fixDoubleBlack(u);
                 }
+                // Egyszerű eset, a leváltó csúcs piros, ezért átszínezzük
                 else{
                     u->color = BLACK;
                 }
             }
         }
+        // A nodenak két gyereke van, ezért kicseréljük a leváltó adatait a node adataival,
+        // és meghívjuk a törlést a leváltóra.
         else{
             std::swap(u->key, node->key);
             std::swap(u->data, node->data);

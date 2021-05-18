@@ -3,15 +3,21 @@
 #include <string>
 #include "node.hpp"
 
+///Egy Unix process megtestesitője.
 class Task{
     private:
-        int pid; // A feladat folyamat azonositoja.
-        int x_coord, y_coord; // A feladat koordinatai a megjelenitett faban.
+        /// A feladat folyamat azonosítója.
+        int pid;
+        /// A feladat koordinátái a megjelenített fában.
+        int x_coord, y_coord;
         std::string name;
-        Node* treeNode; // A feladat csomopontja a piros-fekete faban;
-        bool isRunning;
+        /// A feladat csomópontja a piros-fekete fában;
+        Node* treeNode;
+        /// A feladat szintje a piros-fekete fában.
         int level;
+        /// A feladat összes futási ideje.
         int vruntime;
+        /// A feladat futási ideje egy iterációban.
         int pTime;
     public:
         Task(int pid, std::string& name, int pTime, int vruntime);

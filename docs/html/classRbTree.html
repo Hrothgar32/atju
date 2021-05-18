@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Álmos Totálisan Jóarc Ütemezője: RbTree osztályreferencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Álmos Totálisan Jóarc Ütemezője
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vizulizálja a Linux scheduler működését.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-methods">Privát tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
+<a href="classRbTree-members.html">A tagok teljes listája</a>  </div>
+  <div class="headertitle">
+<div class="title">RbTree osztályreferencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Nagyjából standard és általános piros-fekete fa implementáció.  
+ <a href="classRbTree.html#details">Részletek...</a></p>
+
+<p><code>#include &lt;<a class="el" href="rbtree_8hpp_source.html">rbtree.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:ae5c884f1001bf141205dddd88b2784b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#ae5c884f1001bf141205dddd88b2784b5">rbInsert</a> (const int &amp;key)</td></tr>
+<tr class="memdesc:ae5c884f1001bf141205dddd88b2784b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Behelyez egy új csomópontot a piros-fekete fába, és frissíti a minimális csomópontot.  <a href="classRbTree.html#ae5c884f1001bf141205dddd88b2784b5">Részletek...</a><br /></td></tr>
+<tr class="separator:ae5c884f1001bf141205dddd88b2784b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3cec7d854595ed272b928c8925e83d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#ae3cec7d854595ed272b928c8925e83d8">rbDelete</a> (<a class="el" href="structNode.html">Node</a> *node)</td></tr>
+<tr class="memdesc:ae3cec7d854595ed272b928c8925e83d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kivesz egy csomópontot a piros-fekete fából.  <a href="classRbTree.html#ae3cec7d854595ed272b928c8925e83d8">Részletek...</a><br /></td></tr>
+<tr class="separator:ae3cec7d854595ed272b928c8925e83d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab484abeed688e37817aeabba00f68df5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structNode.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#ab484abeed688e37817aeabba00f68df5">getLevelOrder</a> ()</td></tr>
+<tr class="memdesc:ab484abeed688e37817aeabba00f68df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszatéríti a fa csomópontjait szint szerinti sorrendben.  <a href="classRbTree.html#ab484abeed688e37817aeabba00f68df5">Részletek...</a><br /></td></tr>
+<tr class="separator:ab484abeed688e37817aeabba00f68df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b8246c85f945f3331f18f2cbbe477e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#a13b8246c85f945f3331f18f2cbbe477e">getRoot</a> ()</td></tr>
+<tr class="memdesc:a13b8246c85f945f3331f18f2cbbe477e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszatéríti a piros-fekete fa gyökerét.  <a href="classRbTree.html#a13b8246c85f945f3331f18f2cbbe477e">Részletek...</a><br /></td></tr>
+<tr class="separator:a13b8246c85f945f3331f18f2cbbe477e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ab3001f76f3d47651ec85616ff3c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#ae6ab3001f76f3d47651ec85616ff3c21">search</a> (const int &amp;key)</td></tr>
+<tr class="memdesc:ae6ab3001f76f3d47651ec85616ff3c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszatéríti a fa "key" kulcsú csomópontját, ha létezik.  <a href="classRbTree.html#ae6ab3001f76f3d47651ec85616ff3c21">Részletek...</a><br /></td></tr>
+<tr class="separator:ae6ab3001f76f3d47651ec85616ff3c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e29c3383c7bba70b23db68bd781c39"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#a69e29c3383c7bba70b23db68bd781c39">popMin</a> ()</td></tr>
+<tr class="memdesc:a69e29c3383c7bba70b23db68bd781c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kitörli a minimális csomópontot, és visszatéríti a benne levő adatot.  <a href="classRbTree.html#a69e29c3383c7bba70b23db68bd781c39">Részletek...</a><br /></td></tr>
+<tr class="separator:a69e29c3383c7bba70b23db68bd781c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Privát tagfüggvények</h2></td></tr>
+<tr class="memitem:a06f836aec3409798eaaafb462c18bb59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#a06f836aec3409798eaaafb462c18bb59">insert</a> (<a class="el" href="structNode.html">Node</a> *root, <a class="el" href="structNode.html">Node</a> *newNode)</td></tr>
+<tr class="memdesc:a06f836aec3409798eaaafb462c18bb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Privát rekurzív bináris keresőfa beszúrás.  <a href="classRbTree.html#a06f836aec3409798eaaafb462c18bb59">Részletek...</a><br /></td></tr>
+<tr class="separator:a06f836aec3409798eaaafb462c18bb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0231fdefa41bdb4e5c3c8efeb705e206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#a0231fdefa41bdb4e5c3c8efeb705e206">fixTreeAfterInsert</a> (<a class="el" href="structNode.html">Node</a> *&amp;root, <a class="el" href="structNode.html">Node</a> *newNode)</td></tr>
+<tr class="memdesc:a0231fdefa41bdb4e5c3c8efeb705e206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kijavítja beszúrás után a piros-fekete tulajdonságot.  <a href="classRbTree.html#a0231fdefa41bdb4e5c3c8efeb705e206">Részletek...</a><br /></td></tr>
+<tr class="separator:a0231fdefa41bdb4e5c3c8efeb705e206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765e2187f5e19425d69fe88a5c01eecb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#a765e2187f5e19425d69fe88a5c01eecb">rotateLeft</a> (<a class="el" href="structNode.html">Node</a> *&amp;root, <a class="el" href="structNode.html">Node</a> *&amp;nodePtr)</td></tr>
+<tr class="memdesc:a765e2187f5e19425d69fe88a5c01eecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Végrehajt egy bal forgatást a megadott csomóponton.  <a href="classRbTree.html#a765e2187f5e19425d69fe88a5c01eecb">Részletek...</a><br /></td></tr>
+<tr class="separator:a765e2187f5e19425d69fe88a5c01eecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac74c92cd12cd6001ac9bea0b932e2a0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#ac74c92cd12cd6001ac9bea0b932e2a0a">rotateRight</a> (<a class="el" href="structNode.html">Node</a> *&amp;root, <a class="el" href="structNode.html">Node</a> *&amp;nodePtr)</td></tr>
+<tr class="memdesc:ac74c92cd12cd6001ac9bea0b932e2a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Végrehajt egy jobb forgatást a megadott csomóponton.  <a href="classRbTree.html#ac74c92cd12cd6001ac9bea0b932e2a0a">Részletek...</a><br /></td></tr>
+<tr class="separator:ac74c92cd12cd6001ac9bea0b932e2a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4c3da0ceede65bcf9ad79243ba9d7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#a2a4c3da0ceede65bcf9ad79243ba9d7c">replacementSearch</a> (<a class="el" href="structNode.html">Node</a> *x)</td></tr>
+<tr class="memdesc:a2a4c3da0ceede65bcf9ad79243ba9d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Megkeresi az x csomópont utódját BST törlés esetén.  <a href="classRbTree.html#a2a4c3da0ceede65bcf9ad79243ba9d7c">Részletek...</a><br /></td></tr>
+<tr class="separator:a2a4c3da0ceede65bcf9ad79243ba9d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13620af05da75142d0932fbacea665cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#a13620af05da75142d0932fbacea665cd">successor</a> (<a class="el" href="structNode.html">Node</a> *x)</td></tr>
+<tr class="memdesc:a13620af05da75142d0932fbacea665cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszatéríti az x csomópont által jelzett al-fa legkisebb elemét.  <a href="classRbTree.html#a13620af05da75142d0932fbacea665cd">Részletek...</a><br /></td></tr>
+<tr class="separator:a13620af05da75142d0932fbacea665cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2e0bccbdbf7c4ac0d6772ed265e9679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRbTree.html#af2e0bccbdbf7c4ac0d6772ed265e9679">fixDoubleBlack</a> (<a class="el" href="structNode.html">Node</a> *x)</td></tr>
+<tr class="memdesc:af2e0bccbdbf7c4ac0d6772ed265e9679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kijavítja a megadott x csúcs "duplafeketeségét".  <a href="classRbTree.html#af2e0bccbdbf7c4ac0d6772ed265e9679">Részletek...</a><br /></td></tr>
+<tr class="separator:af2e0bccbdbf7c4ac0d6772ed265e9679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:a66aa50541f8478c3c2fbc514c7cb184e"><td class="memItemLeft" align="right" valign="top"><a id="a66aa50541f8478c3c2fbc514c7cb184e"></a>
+<a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>root</b></td></tr>
+<tr class="separator:a66aa50541f8478c3c2fbc514c7cb184e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cb52bf609a921b1a64891155f3590c"><td class="memItemLeft" align="right" valign="top"><a id="aa2cb52bf609a921b1a64891155f3590c"></a>
+<a class="el" href="structNode.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>minNode</b></td></tr>
+<tr class="separator:aa2cb52bf609a921b1a64891155f3590c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>Nagyjából standard és általános piros-fekete fa implementáció. </p>
+</div><h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="af2e0bccbdbf7c4ac0d6772ed265e9679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e0bccbdbf7c4ac0d6772ed265e9679">&#9670;&nbsp;</a></span>fixDoubleBlack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RbTree::fixDoubleBlack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kijavítja a megadott x csúcs "duplafeketeségét". </p>
+<p>A dupla-fekete javításnál főleg a testvér színét figyeljük. a) Ha a testvér fekete, és van legalább egy piros gyermeke, akkor maximum két forgatással ki lehet javítani a fekete magasságot. b) Ha a testvér fekete és mindkét gyermeke fekete, akkor átszínezzük a testvért pirosra, a szülőt feketére, s ha a szülő duplafekete lesz, meghívjuk rá is a függvényt. c) Ha a testvér piros, akkor átszínezzük feketére, a szülőt pirosra, forgatunk egyet a szülőn attól függően, hogy hol van a testvér, és visszatérünk az a) vagy b) esetre.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>A csúcs amit "megjavítunk". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0231fdefa41bdb4e5c3c8efeb705e206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0231fdefa41bdb4e5c3c8efeb705e206">&#9670;&nbsp;</a></span>fixTreeAfterInsert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RbTree::fixTreeAfterInsert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&amp;&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>newNode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kijavítja beszúrás után a piros-fekete tulajdonságot. </p>
+<p>A kijavítási folyamat tartalmazhat forgatásokat és átszínezéseket, és rotációkat. Mivel minden beszúrt új csomópont piros, ezért leredukálható a probléma az egymást követő piros eset kijavítására. Ha a nagybácsi (a newNode szülőjének testvére) piros, akkor egyszerűen a szülő s a nagybácsi színét feketére állítjuk és a nagyszülőjét pedig pirosra. Fekete esetben 4 eset fordulhat elő:</p><ol type="1">
+<li>Bal-bal(a szülő a nagyszülő bal gyermeke és a newNode a szülő bal gyermeke): Végrehajtunk egy jobb forgatást a nagyszülőn, kicseréljük a szülő és nagyszülő színét.</li>
+<li>Bal-jobb: Végrehajtunk egy bal forgatást a szülőn, ezután visszatértünk a bal-bal esethez.</li>
+<li>Jobb-jobb: Végrehajtunk egy bal forgatást a nagyszülőn, kicseréljük a szülő és a nagyszülő színét.</li>
+<li>Jobb-bal: Végrehajtunk egy jobb forgatást a szülőn, ezután visszatértünk a jobb-jobb esethez. A fenti eseteket addig folytatjuk, amíg a newNode paraméter fekete nem lesz, vagy pedig a szülő fekete lesz.</li>
+</ol>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>A fa gyökere </td></tr>
+    <tr><td class="paramname">newNode</td><td>Az új beszúrt csomópont. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab484abeed688e37817aeabba00f68df5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab484abeed688e37817aeabba00f68df5">&#9670;&nbsp;</a></span>getLevelOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structNode.html">Node</a>*&gt; RbTree::getLevelOrder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszatéríti a fa csomópontjait szint szerinti sorrendben. </p>
+<p>A getLevelOrder függvény egy várakozási sor segítségével bejárja a piros-fekete fát, szintről-szintre haladva.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>A fa csomópontjait tartalmazó vektor. </dd></dl>
+
+</div>
+</div>
+<a id="a13b8246c85f945f3331f18f2cbbe477e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b8246c85f945f3331f18f2cbbe477e">&#9670;&nbsp;</a></span>getRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNode.html">Node</a>* RbTree::getRoot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszatéríti a piros-fekete fa gyökerét. </p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>A fa gyökerét tartalmazó csomópont. </dd></dl>
+
+</div>
+</div>
+<a id="a06f836aec3409798eaaafb462c18bb59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f836aec3409798eaaafb462c18bb59">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNode.html">Node</a>* RbTree::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>newNode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Privát rekurzív bináris keresőfa beszúrás. </p>
+<p>A szülőt azért térítjük vissza, hogy meg tudjuk hívni a piros-fekete tulajdonság kijavítására szolgáló fixTreeAfterInsert függvényt.</p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>Visszatéríti az újonnan beszúrt csomópont szülőjét. </dd></dl>
+
+</div>
+</div>
+<a id="a69e29c3383c7bba70b23db68bd781c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e29c3383c7bba70b23db68bd781c39">&#9670;&nbsp;</a></span>popMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;void&gt; RbTree::popMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Kitörli a minimális csomópontot, és visszatéríti a benne levő adatot. </p>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>A csomópontban levő adatra mutató megosztott mutató. </dd></dl>
+
+</div>
+</div>
+<a id="ae3cec7d854595ed272b928c8925e83d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3cec7d854595ed272b928c8925e83d8">&#9670;&nbsp;</a></span>rbDelete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RbTree::rbDelete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Kivesz egy csomópontot a piros-fekete fából. </p>
+<p>Először kitörli egy standard BST törléssel, utána pedig, ha fennáll az eset, kijavítja a dupla fekete hibát a fixDoubleBlack függvénnyel. Hívjuk v-nek a törölt csúcsot és u-nak a csúcsot, amivel lecseréljük ezt a törölt csúcsot. A legegyszerűbb eset akkor áll fenn, ha vagy u vagy v piros, ekkor egyszerűen az u csúcsot átszínezzük pirosra. Ha mindkettő csúcs fekete, akkor törlés után (vagy előtt, ha a leváltó nullptr) meghívjuk a fixDoubleBlack függvényt.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>A törlendő csomópontra mutató pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5c884f1001bf141205dddd88b2784b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c884f1001bf141205dddd88b2784b5">&#9670;&nbsp;</a></span>rbInsert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNode.html">Node</a>* RbTree::rbInsert </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Behelyez egy új csomópontot a piros-fekete fába, és frissíti a minimális csomópontot. </p>
+<p>Az rbInsert függvény először létrehoz egy új csomópontot, majd végrehajt egy standard bináris-keresőfa beszúrást az insert metódussal. utána pedig (ha szükséges) kijavítja az esetleges piros-fekete tulajdonság megsértését a fixTreeAfterInsert privát metódussal.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>A kulcs, ami alapjan el lesz rendezve a csomópont a keresőfában.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>Az újonnan létrehozott csomópont. </dd></dl>
+
+</div>
+</div>
+<a id="a2a4c3da0ceede65bcf9ad79243ba9d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4c3da0ceede65bcf9ad79243ba9d7c">&#9670;&nbsp;</a></span>replacementSearch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNode.html">Node</a>* RbTree::replacementSearch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Megkeresi az x csomópont utódját BST törlés esetén. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>A csomópont aminek a "leváltóját" keressük. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>Az x csomópont "leváltója". </dd></dl>
+
+</div>
+</div>
+<a id="a765e2187f5e19425d69fe88a5c01eecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765e2187f5e19425d69fe88a5c01eecb">&#9670;&nbsp;</a></span>rotateLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RbTree::rotateLeft </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&amp;&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&amp;&#160;</td>
+          <td class="paramname"><em>nodePtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Végrehajt egy bal forgatást a megadott csomóponton. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>A fa gyökere. </td></tr>
+    <tr><td class="paramname">nodePtr</td><td>A "megforgatott" csomópont. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac74c92cd12cd6001ac9bea0b932e2a0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac74c92cd12cd6001ac9bea0b932e2a0a">&#9670;&nbsp;</a></span>rotateRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RbTree::rotateRight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&amp;&#160;</td>
+          <td class="paramname"><em>root</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&amp;&#160;</td>
+          <td class="paramname"><em>nodePtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Végrehajt egy jobb forgatást a megadott csomóponton. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">root</td><td>A fa gyökere. </td></tr>
+    <tr><td class="paramname">nodePtr</td><td>A "megforgatott" csomópont. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae6ab3001f76f3d47651ec85616ff3c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ab3001f76f3d47651ec85616ff3c21">&#9670;&nbsp;</a></span>search()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNode.html">Node</a>* RbTree::search </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszatéríti a fa "key" kulcsú csomópontját, ha létezik. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>A keresett csomópont kulcsa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>A kulcsot tartalmazó csomópont, másképp egy nullptr. </dd></dl>
+
+</div>
+</div>
+<a id="a13620af05da75142d0932fbacea665cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13620af05da75142d0932fbacea665cd">&#9670;&nbsp;</a></span>successor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structNode.html">Node</a>* RbTree::successor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Visszatéríti az x csomópont által jelzett al-fa legkisebb elemét. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Az x csomópont. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Visszatérési érték</dt><dd>Az al-fa legbaloldalibb vagy legkisebb nem-nullptr eleme. </dd></dl>
+
+</div>
+</div>
+<hr/>Ez a dokumentáció az osztályról a következő fájl alapján készült:<ul>
+<li>headers/<a class="el" href="rbtree_8hpp_source.html">rbtree.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

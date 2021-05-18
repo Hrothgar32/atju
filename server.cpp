@@ -81,8 +81,6 @@ void Server::listenRunnable(){
                 insertTask(newTask);
                 break;
             }
-            case PS:
-                break;
             case EXIT:
                 shouldRun = false;
                 drawer->disableDraw();

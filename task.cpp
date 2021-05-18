@@ -7,7 +7,6 @@ Task::Task(int pid, std::string& name, int pTime, int vruntime){
     this->pTime = pTime;
     this->vruntime = vruntime;
     treeNode = nullptr;
-    isRunning = false;
     level = x_coord = y_coord = 0;
 }
 

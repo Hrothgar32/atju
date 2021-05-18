@@ -1,0 +1,136 @@
+\hypertarget{classServer}{}\doxysection{Server osztályreferencia}
+\label{classServer}\index{Server@{Server}}
+
+
+A folyamatokat kezelő, vizualizációt feladatfuttatással összekötő szerver.  
+
+
+
+
+{\ttfamily \#include $<$server.\+hpp$>$}
+
+\doxysubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer_a3590806eb492092316ac46c2675e4a6f}\label{classServer_a3590806eb492092316ac46c2675e4a6f}} 
+{\bfseries Server} (\mbox{\hyperlink{classRbTree}{Rb\+Tree}} $\ast$tree, std\+::mutex $\ast$mutex, \mbox{\hyperlink{classDrawer}{Drawer}} $\ast$drawer)
+\item 
+\mbox{\Hypertarget{classServer_a4d3bd5c0771a25600410ff60644f0e54}\label{classServer_a4d3bd5c0771a25600410ff60644f0e54}} 
+void {\bfseries listen\+Runnable} ()
+\item 
+\mbox{\Hypertarget{classServer_a8a79d8a5e9482d96fe5f40f3842d6780}\label{classServer_a8a79d8a5e9482d96fe5f40f3842d6780}} 
+void {\bfseries run\+Task\+Runnable} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Privát tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classServer_adad2a52028f861abb6c984acb5f5ef5f}{insert\+Task}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTask}{Task}} $>$ \&task)
+\begin{DoxyCompactList}\small\item\em Beilleszt egy folyamatot menedzseltek közé. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a2be781c156cdb464e1a7b8c25c6bdac1}{remove\+Task}} (int pid)
+\begin{DoxyCompactList}\small\item\em Eltávolít egy folyamatot a PID-\/je alapján. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a40cff68f94477387abad8ff4f31434be}{run\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Futtatja a minimális vruntime-\/al rendelkező folyamatot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_a507df8935aa1332d8b8d657fd7455ed8}{update\+Owners}} ()
+\begin{DoxyCompactList}\small\item\em Frissíti a folyamatok csomópontjait törlés után. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Privát attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classServer_ad9c513cf472da077f8095596f1b64523}\label{classServer_ad9c513cf472da077f8095596f1b64523}} 
+int \mbox{\hyperlink{classServer_ad9c513cf472da077f8095596f1b64523}{pid\+Count}}
+\begin{DoxyCompactList}\small\item\em A már inicializált PID-\/eket számolja. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_ac939dcfafe38bfdcf52a2d4d0d3ee789}\label{classServer_ac939dcfafe38bfdcf52a2d4d0d3ee789}} 
+std\+::mutex $\ast$ {\bfseries mutex}
+\item 
+\mbox{\Hypertarget{classServer_a7709efcc117c9547a506abac2789398e}\label{classServer_a7709efcc117c9547a506abac2789398e}} 
+\mbox{\hyperlink{structMessage}{Message}} \mbox{\hyperlink{classServer_a7709efcc117c9547a506abac2789398e}{message}}
+\begin{DoxyCompactList}\small\item\em Az éppen feldolgozandó üzenet. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_ad913b618d2943986e134e905ac64e590}\label{classServer_ad913b618d2943986e134e905ac64e590}} 
+io\+\_\+context {\bfseries context}
+\item 
+\mbox{\Hypertarget{classServer_a65ca4f26654dc49de262be018c08929c}\label{classServer_a65ca4f26654dc49de262be018c08929c}} 
+udp\+::endpoint {\bfseries receiver}
+\item 
+\mbox{\Hypertarget{classServer_a39bc6e180b995cb0ba95d72cee8fe742}\label{classServer_a39bc6e180b995cb0ba95d72cee8fe742}} 
+udp\+::socket {\bfseries server\+Socket}
+\item 
+\mbox{\Hypertarget{classServer_a6721fea77106ac870136ca53577164da}\label{classServer_a6721fea77106ac870136ca53577164da}} 
+mutable\+\_\+buffer {\bfseries buffer}
+\item 
+\mbox{\Hypertarget{classServer_ae487d6c751018009c4af867f322e9b86}\label{classServer_ae487d6c751018009c4af867f322e9b86}} 
+err\+\_\+code {\bfseries ec}
+\item 
+\mbox{\Hypertarget{classServer_ab65941066c8e77a4efc1816685a29645}\label{classServer_ab65941066c8e77a4efc1816685a29645}} 
+\mbox{\hyperlink{classRbTree}{Rb\+Tree}} $\ast$ {\bfseries tree}
+\item 
+\mbox{\Hypertarget{classServer_a742901722f02b1747eab27b51c2112c6}\label{classServer_a742901722f02b1747eab27b51c2112c6}} 
+\mbox{\hyperlink{classDrawer}{Drawer}} $\ast$ {\bfseries drawer}
+\item 
+\mbox{\Hypertarget{classServer_ad58b429eb72a48584f18ca2a67e0e4e5}\label{classServer_ad58b429eb72a48584f18ca2a67e0e4e5}} 
+bool {\bfseries should\+Run}
+\item 
+\mbox{\Hypertarget{classServer_a089dc319375a5e201df9f0f98ef2859a}\label{classServer_a089dc319375a5e201df9f0f98ef2859a}} 
+std\+::unordered\+\_\+map$<$ int, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTask}{Task}} $>$ $>$ \mbox{\hyperlink{classServer_a089dc319375a5e201df9f0f98ef2859a}{tasks}}
+\begin{DoxyCompactList}\small\item\em A szerver által menedzselt feladatok. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+A folyamatokat kezelő, vizualizációt feladatfuttatással összekötő szerver. 
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\mbox{\Hypertarget{classServer_adad2a52028f861abb6c984acb5f5ef5f}\label{classServer_adad2a52028f861abb6c984acb5f5ef5f}} 
+\index{Server@{Server}!insertTask@{insertTask}}
+\index{insertTask@{insertTask}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{insertTask()}{insertTask()}}
+{\footnotesize\ttfamily void Server\+::insert\+Task (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTask}{Task}} $>$ \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Beilleszt egy folyamatot menedzseltek közé. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em task} & A beillesztendő feladatot kezelő mutató \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_a2be781c156cdb464e1a7b8c25c6bdac1}\label{classServer_a2be781c156cdb464e1a7b8c25c6bdac1}} 
+\index{Server@{Server}!removeTask@{removeTask}}
+\index{removeTask@{removeTask}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{removeTask()}{removeTask()}}
+{\footnotesize\ttfamily void Server\+::remove\+Task (\begin{DoxyParamCaption}\item[{int}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Eltávolít egy folyamatot a PID-\/je alapján. 
+
+A függvény megkeresi a tasks hasítótáblában a folyamatot, majd pedig eltávolítja a piros-\/fekete fából is.
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em pid} & A folyamat Process ID-\/ja \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_a40cff68f94477387abad8ff4f31434be}\label{classServer_a40cff68f94477387abad8ff4f31434be}} 
+\index{Server@{Server}!runTask@{runTask}}
+\index{runTask@{runTask}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{runTask()}{runTask()}}
+{\footnotesize\ttfamily void Server\+::run\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Futtatja a minimális vruntime-\/al rendelkező folyamatot. 
+
+A függvény az rb\+Tree pop\+Min metódusát felhasználva megkapja a minimális vruntime-\/al rendelkező folyamatot, majd pedig \char`\"{}futtatja\char`\"{} -\/-\/$>$ A task p\+Time változó ideéig sleepel a folyamatot futtató thread. \mbox{\Hypertarget{classServer_a507df8935aa1332d8b8d657fd7455ed8}\label{classServer_a507df8935aa1332d8b8d657fd7455ed8}} 
+\index{Server@{Server}!updateOwners@{updateOwners}}
+\index{updateOwners@{updateOwners}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{updateOwners()}{updateOwners()}}
+{\footnotesize\ttfamily void Server\+::update\+Owners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Frissíti a folyamatok csomópontjait törlés után. 
+
+Ez a függvény egy szükségszerű megoldás arra az eshetőségre, mikor a fából való törlés a másoló módszer alapján dolgozik\+: ilyenkor egy \mbox{\hyperlink{classTask}{Task}} struktúra tree\+Node pointere olyan csomópontra mutathat, ami már esetleg törölve volt. 
+
+Ez a dokumentáció az osztályról a következő fájl alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+headers/server.\+hpp\end{DoxyCompactItemize}

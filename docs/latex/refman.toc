@@ -1,0 +1,43 @@
+\select@language {magyar} \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\select@language {magyar} \contentsline {chapter}{\numberline {1}Névtérmutató}{1}{chapter.1}%
+\select@language {magyar} \contentsline {section}{\numberline {1.1}Névtérlista}{1}{section.1.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {2}Osztálymutató}{3}{chapter.2}%
+\select@language {magyar} \contentsline {section}{\numberline {2.1}Osztálylista}{3}{section.2.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {3}Névterek dokumentációja}{5}{chapter.3}%
+\select@language {magyar} \contentsline {section}{\numberline {3.1}almtree névtér-\/referencia}{5}{section.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {3.1.1}Részletes leírás}{5}{subsection.3.1.1}%
+\select@language {magyar} \contentsline {chapter}{\numberline {4}Osztályok dokumentációja}{7}{chapter.4}%
+\select@language {magyar} \contentsline {section}{\numberline {4.1}Drawer osztályreferencia}{7}{section.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1.1}Részletes leírás}{8}{subsection.4.1.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.1.2}Tagfüggvények dokumentációja}{8}{subsection.4.1.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.2.1}draw()}{8}{subsubsection.4.1.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.2.2}drawRunnable()}{8}{subsubsection.4.1.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.1.2.3}treeCToGraphicsC()}{8}{subsubsection.4.1.2.3}%
+\select@language {magyar} \contentsline {section}{\numberline {4.2}Message struktúrareferencia}{8}{section.4.2}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.2.1}Részletes leírás}{9}{subsection.4.2.1}%
+\select@language {magyar} \contentsline {section}{\numberline {4.3}Node struktúrareferencia}{9}{section.4.3}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.1}Részletes leírás}{9}{subsection.4.3.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.3.2}Tagfüggvények dokumentációja}{9}{subsection.4.3.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.2.1}isOnLeft()}{10}{subsubsection.4.3.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.3.2.2}sibling()}{10}{subsubsection.4.3.2.2}%
+\select@language {magyar} \contentsline {section}{\numberline {4.4}Rb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tree osztályreferencia}{10}{section.4.4}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.1}Részletes leírás}{11}{subsection.4.4.1}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.4.2}Tagfüggvények dokumentációja}{11}{subsection.4.4.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.1}fixDoubleBlack()}{11}{subsubsection.4.4.2.1}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.2}fixTreeAfterInsert()}{12}{subsubsection.4.4.2.2}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.3}getLevelOrder()}{12}{subsubsection.4.4.2.3}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.4}getRoot()}{12}{subsubsection.4.4.2.4}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.5}insert()}{13}{subsubsection.4.4.2.5}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.6}popMin()}{13}{subsubsection.4.4.2.6}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.7}rbDelete()}{13}{subsubsection.4.4.2.7}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.8}rbInsert()}{13}{subsubsection.4.4.2.8}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.9}replacementSearch()}{14}{subsubsection.4.4.2.9}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.10}rotateLeft()}{14}{subsubsection.4.4.2.10}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.11}rotateRight()}{15}{subsubsection.4.4.2.11}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.12}search()}{15}{subsubsection.4.4.2.12}%
+\select@language {magyar} \contentsline {subsubsection}{\numberline {4.4.2.13}successor()}{15}{subsubsection.4.4.2.13}%
+\select@language {magyar} \contentsline {section}{\numberline {4.5}Server osztályreferencia}{16}{section.4.5}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.5.1}Részletes leírás}{16}{subsection.4.5.1}%
+\select@language {magyar} \contentsline {section}{\numberline {4.6}Task osztályreferencia}{17}{section.4.6}%
+\select@language {magyar} \contentsline {subsection}{\numberline {4.6.1}Részletes leírás}{17}{subsection.4.6.1}%
+\select@language {magyar} \contentsline {chapter}{T\'argymutat\'o}{19}{section*.16}%

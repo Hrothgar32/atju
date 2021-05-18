@@ -18,5 +18,4 @@ int main(int argc, char* argv[]){
     drawerThread.join();
     taskRunnerThread.join();
     return 0;
-    
 }

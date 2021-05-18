@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Álmos Totálisan Jóarc Ütemezője: headers/rbtree.hpp Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Álmos Totálisan Jóarc Ütemezője
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vizulizálja a Linux scheduler működését.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">rbtree.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __RBTREE_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __RBTREE_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;node.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classRbTree.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRbTree.html">RbTree</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <a class="code" href="structNode.html">Node</a>* root;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="structNode.html">Node</a>* minNode;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classRbTree.html#a06f836aec3409798eaaafb462c18bb59">   21</a></span>&#160;        <a class="code" href="structNode.html">Node</a>* <a class="code" href="classRbTree.html#a06f836aec3409798eaaafb462c18bb59">insert</a>(<a class="code" href="structNode.html">Node</a>* root, <a class="code" href="structNode.html">Node</a>* newNode);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classRbTree.html#a0231fdefa41bdb4e5c3c8efeb705e206">   47</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classRbTree.html#a0231fdefa41bdb4e5c3c8efeb705e206">fixTreeAfterInsert</a>(<a class="code" href="structNode.html">Node</a>* &amp;root, <a class="code" href="structNode.html">Node</a>* newNode);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classRbTree.html#a765e2187f5e19425d69fe88a5c01eecb">   55</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classRbTree.html#a765e2187f5e19425d69fe88a5c01eecb">rotateLeft</a>(<a class="code" href="structNode.html">Node</a>*&amp; root, <a class="code" href="structNode.html">Node</a>*&amp; nodePtr);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classRbTree.html#ac74c92cd12cd6001ac9bea0b932e2a0a">   63</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classRbTree.html#ac74c92cd12cd6001ac9bea0b932e2a0a">rotateRight</a>(<a class="code" href="structNode.html">Node</a>*&amp; root, <a class="code" href="structNode.html">Node</a>*&amp; nodePtr);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classRbTree.html#a2a4c3da0ceede65bcf9ad79243ba9d7c">   70</a></span>&#160;        <a class="code" href="structNode.html">Node</a>* <a class="code" href="classRbTree.html#a2a4c3da0ceede65bcf9ad79243ba9d7c">replacementSearch</a>(<a class="code" href="structNode.html">Node</a>* x);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classRbTree.html#a13620af05da75142d0932fbacea665cd">   77</a></span>&#160;        <a class="code" href="structNode.html">Node</a>* <a class="code" href="classRbTree.html#a13620af05da75142d0932fbacea665cd">successor</a>(<a class="code" href="structNode.html">Node</a>* x);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classRbTree.html#af2e0bccbdbf7c4ac0d6772ed265e9679">   94</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classRbTree.html#af2e0bccbdbf7c4ac0d6772ed265e9679">fixDoubleBlack</a>(<a class="code" href="structNode.html">Node</a>* x);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classRbTree.html">RbTree</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        ~<a class="code" href="classRbTree.html">RbTree</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classRbTree.html#ae5c884f1001bf141205dddd88b2784b5">  112</a></span>&#160;        <a class="code" href="structNode.html">Node</a>* <a class="code" href="classRbTree.html#ae5c884f1001bf141205dddd88b2784b5">rbInsert</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; key);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classRbTree.html#ae3cec7d854595ed272b928c8925e83d8">  129</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classRbTree.html#ae3cec7d854595ed272b928c8925e83d8">rbDelete</a>(<a class="code" href="structNode.html">Node</a>* node);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classRbTree.html#ab484abeed688e37817aeabba00f68df5">  139</a></span>&#160;        std::vector&lt;Node*&gt; <a class="code" href="classRbTree.html#ab484abeed688e37817aeabba00f68df5">getLevelOrder</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classRbTree.html#a13b8246c85f945f3331f18f2cbbe477e">  145</a></span>&#160;        <a class="code" href="structNode.html">Node</a>* <a class="code" href="classRbTree.html#a13b8246c85f945f3331f18f2cbbe477e">getRoot</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classRbTree.html#ae6ab3001f76f3d47651ec85616ff3c21">  152</a></span>&#160;        <a class="code" href="structNode.html">Node</a>* <a class="code" href="classRbTree.html#ae6ab3001f76f3d47651ec85616ff3c21">search</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; key);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classRbTree.html#a69e29c3383c7bba70b23db68bd781c39">  159</a></span>&#160;        std::shared_ptr&lt;void&gt; <a class="code" href="classRbTree.html#a69e29c3383c7bba70b23db68bd781c39">popMin</a>();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// __RBTREE_H_</span></div>
+<div class="ttc" id="aclassRbTree_html"><div class="ttname"><a href="classRbTree.html">RbTree</a></div><div class="ttdoc">Nagyjából standard és általános piros-fekete fa implementáció.</div><div class="ttdef"><b>Definition:</b> rbtree.hpp:8</div></div>
+<div class="ttc" id="aclassRbTree_html_a0231fdefa41bdb4e5c3c8efeb705e206"><div class="ttname"><a href="classRbTree.html#a0231fdefa41bdb4e5c3c8efeb705e206">RbTree::fixTreeAfterInsert</a></div><div class="ttdeci">void fixTreeAfterInsert(Node *&amp;root, Node *newNode)</div><div class="ttdoc">Kijavítja beszúrás után a piros-fekete tulajdonságot.</div></div>
+<div class="ttc" id="aclassRbTree_html_a06f836aec3409798eaaafb462c18bb59"><div class="ttname"><a href="classRbTree.html#a06f836aec3409798eaaafb462c18bb59">RbTree::insert</a></div><div class="ttdeci">Node * insert(Node *root, Node *newNode)</div><div class="ttdoc">Privát rekurzív bináris keresőfa beszúrás.</div></div>
+<div class="ttc" id="aclassRbTree_html_a13620af05da75142d0932fbacea665cd"><div class="ttname"><a href="classRbTree.html#a13620af05da75142d0932fbacea665cd">RbTree::successor</a></div><div class="ttdeci">Node * successor(Node *x)</div><div class="ttdoc">Visszatéríti az x csomópont által jelzett al-fa legkisebb elemét.</div></div>
+<div class="ttc" id="aclassRbTree_html_a13b8246c85f945f3331f18f2cbbe477e"><div class="ttname"><a href="classRbTree.html#a13b8246c85f945f3331f18f2cbbe477e">RbTree::getRoot</a></div><div class="ttdeci">Node * getRoot()</div><div class="ttdoc">Visszatéríti a piros-fekete fa gyökerét.</div></div>
+<div class="ttc" id="aclassRbTree_html_a2a4c3da0ceede65bcf9ad79243ba9d7c"><div class="ttname"><a href="classRbTree.html#a2a4c3da0ceede65bcf9ad79243ba9d7c">RbTree::replacementSearch</a></div><div class="ttdeci">Node * replacementSearch(Node *x)</div><div class="ttdoc">Megkeresi az x csomópont utódját BST törlés esetén.</div></div>
+<div class="ttc" id="aclassRbTree_html_a69e29c3383c7bba70b23db68bd781c39"><div class="ttname"><a href="classRbTree.html#a69e29c3383c7bba70b23db68bd781c39">RbTree::popMin</a></div><div class="ttdeci">std::shared_ptr&lt; void &gt; popMin()</div><div class="ttdoc">Kitörli a minimális csomópontot, és visszatéríti a benne levő adatot.</div></div>
+<div class="ttc" id="aclassRbTree_html_a765e2187f5e19425d69fe88a5c01eecb"><div class="ttname"><a href="classRbTree.html#a765e2187f5e19425d69fe88a5c01eecb">RbTree::rotateLeft</a></div><div class="ttdeci">void rotateLeft(Node *&amp;root, Node *&amp;nodePtr)</div><div class="ttdoc">Végrehajt egy bal forgatást a megadott csomóponton.</div></div>
+<div class="ttc" id="aclassRbTree_html_ab484abeed688e37817aeabba00f68df5"><div class="ttname"><a href="classRbTree.html#ab484abeed688e37817aeabba00f68df5">RbTree::getLevelOrder</a></div><div class="ttdeci">std::vector&lt; Node * &gt; getLevelOrder()</div><div class="ttdoc">Visszatéríti a fa csomópontjait szint szerinti sorrendben.</div></div>
+<div class="ttc" id="aclassRbTree_html_ac74c92cd12cd6001ac9bea0b932e2a0a"><div class="ttname"><a href="classRbTree.html#ac74c92cd12cd6001ac9bea0b932e2a0a">RbTree::rotateRight</a></div><div class="ttdeci">void rotateRight(Node *&amp;root, Node *&amp;nodePtr)</div><div class="ttdoc">Végrehajt egy jobb forgatást a megadott csomóponton.</div></div>
+<div class="ttc" id="aclassRbTree_html_ae3cec7d854595ed272b928c8925e83d8"><div class="ttname"><a href="classRbTree.html#ae3cec7d854595ed272b928c8925e83d8">RbTree::rbDelete</a></div><div class="ttdeci">void rbDelete(Node *node)</div><div class="ttdoc">Kivesz egy csomópontot a piros-fekete fából.</div></div>
+<div class="ttc" id="aclassRbTree_html_ae5c884f1001bf141205dddd88b2784b5"><div class="ttname"><a href="classRbTree.html#ae5c884f1001bf141205dddd88b2784b5">RbTree::rbInsert</a></div><div class="ttdeci">Node * rbInsert(const int &amp;key)</div><div class="ttdoc">Behelyez egy új csomópontot a piros-fekete fába, és frissíti a minimális csomópontot.</div></div>
+<div class="ttc" id="aclassRbTree_html_ae6ab3001f76f3d47651ec85616ff3c21"><div class="ttname"><a href="classRbTree.html#ae6ab3001f76f3d47651ec85616ff3c21">RbTree::search</a></div><div class="ttdeci">Node * search(const int &amp;key)</div><div class="ttdoc">Visszatéríti a fa &quot;key&quot; kulcsú csomópontját, ha létezik.</div></div>
+<div class="ttc" id="aclassRbTree_html_af2e0bccbdbf7c4ac0d6772ed265e9679"><div class="ttname"><a href="classRbTree.html#af2e0bccbdbf7c4ac0d6772ed265e9679">RbTree::fixDoubleBlack</a></div><div class="ttdeci">void fixDoubleBlack(Node *x)</div><div class="ttdoc">Kijavítja a megadott x csúcs &quot;duplafeketeségét&quot;.</div></div>
+<div class="ttc" id="astructNode_html"><div class="ttname"><a href="structNode.html">Node</a></div><div class="ttdoc">A csomópont a piros fekete fában.</div><div class="ttdef"><b>Definition:</b> node.hpp:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

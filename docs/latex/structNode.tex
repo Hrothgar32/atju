@@ -1,0 +1,82 @@
+\hypertarget{structNode}{}\doxysection{Node struktúrareferencia}
+\label{structNode}\index{Node@{Node}}
+
+
+A csomópont a piros fekete fában.  
+
+
+
+
+{\ttfamily \#include $<$node.\+hpp$>$}
+
+\doxysubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNode_a02bcb47dfc6485083cbd7926ccb108ba}\label{structNode_a02bcb47dfc6485083cbd7926ccb108ba}} 
+{\bfseries Node} (int key)
+\item 
+\mbox{\Hypertarget{structNode_abe37c4e4ac86205d2c448e1a97272144}\label{structNode_abe37c4e4ac86205d2c448e1a97272144}} 
+{\bfseries Node} (const \mbox{\hyperlink{structNode}{Node}} \&cpy)
+\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{structNode_a8d009560cd4c5178bf5452e1fe4127b2}{sibling}} ()
+\begin{DoxyCompactList}\small\item\em Visszatéríti a csomópont testvérét. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structNode_a831161e35ae9b4a9b81026f8da5397a9}{is\+On\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Ellenőrzi, hogy a csomópont a szülője bal oldalán van-\/e. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Publikus attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structNode_a3020957813f200a9da836428aad2d8d7}\label{structNode_a3020957813f200a9da836428aad2d8d7}} 
+int {\bfseries key}
+\item 
+\mbox{\Hypertarget{structNode_affad0adcc3e1cf564aa51747dd285db0}\label{structNode_affad0adcc3e1cf564aa51747dd285db0}} 
+std\+::shared\+\_\+ptr$<$ void $>$ {\bfseries data}
+\item 
+\mbox{\Hypertarget{structNode_a6547013094d2e31d1f4b13173436c059}\label{structNode_a6547013094d2e31d1f4b13173436c059}} 
+almtree\+::\+COLOR {\bfseries color}
+\item 
+\mbox{\Hypertarget{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}\label{structNode_ab8c667ac8fdb120ed4c031682a9cdaee}} 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ {\bfseries left}
+\item 
+\mbox{\Hypertarget{structNode_a7328862eaa6dea28018326549b3294d3}\label{structNode_a7328862eaa6dea28018326549b3294d3}} 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ {\bfseries right}
+\item 
+\mbox{\Hypertarget{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}\label{structNode_ad8184598cdea70e4bbdfd76f2b0f9e85}} 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ {\bfseries parent}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+A csomópont a piros fekete fában. 
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\mbox{\Hypertarget{structNode_a831161e35ae9b4a9b81026f8da5397a9}\label{structNode_a831161e35ae9b4a9b81026f8da5397a9}} 
+\index{Node@{Node}!isOnLeft@{isOnLeft}}
+\index{isOnLeft@{isOnLeft}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{isOnLeft()}{isOnLeft()}}
+{\footnotesize\ttfamily bool Node\+::is\+On\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ellenőrzi, hogy a csomópont a szülője bal oldalán van-\/e. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+true ha a bal oldalon van, másképpp false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structNode_a8d009560cd4c5178bf5452e1fe4127b2}\label{structNode_a8d009560cd4c5178bf5452e1fe4127b2}} 
+\index{Node@{Node}!sibling@{sibling}}
+\index{sibling@{sibling}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{sibling()}{sibling()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ Node\+::sibling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Visszatéríti a csomópont testvérét. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+A csomópont testvére. 
+\end{DoxyReturn}
+
+
+Ez a dokumentáció a struktúráról a következő fájl alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+headers/node.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Álmos Totálisan Jóarc Ütemezője: Server osztályreferencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Álmos Totálisan Jóarc Ütemezője
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Vizulizálja a Linux scheduler működését.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Publikus tagfüggvények</a> &#124;
+<a href="#pri-methods">Privát tagfüggvények</a> &#124;
+<a href="#pri-attribs">Privát attribútumok</a> &#124;
+<a href="classServer-members.html">A tagok teljes listája</a>  </div>
+  <div class="headertitle">
+<div class="title">Server osztályreferencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A folyamatokat kezelő, vizualizációt feladatfuttatással összekötő szerver.  
+ <a href="classServer.html#details">Részletek...</a></p>
+
+<p><code>#include &lt;<a class="el" href="server_8hpp_source.html">server.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Publikus tagfüggvények</h2></td></tr>
+<tr class="memitem:a3590806eb492092316ac46c2675e4a6f"><td class="memItemLeft" align="right" valign="top"><a id="a3590806eb492092316ac46c2675e4a6f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Server</b> (<a class="el" href="classRbTree.html">RbTree</a> *tree, std::mutex *mutex, <a class="el" href="classDrawer.html">Drawer</a> *drawer)</td></tr>
+<tr class="separator:a3590806eb492092316ac46c2675e4a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3bd5c0771a25600410ff60644f0e54"><td class="memItemLeft" align="right" valign="top"><a id="a4d3bd5c0771a25600410ff60644f0e54"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>listenRunnable</b> ()</td></tr>
+<tr class="separator:a4d3bd5c0771a25600410ff60644f0e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a79d8a5e9482d96fe5f40f3842d6780"><td class="memItemLeft" align="right" valign="top"><a id="a8a79d8a5e9482d96fe5f40f3842d6780"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>runTaskRunnable</b> ()</td></tr>
+<tr class="separator:a8a79d8a5e9482d96fe5f40f3842d6780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Privát tagfüggvények</h2></td></tr>
+<tr class="memitem:adad2a52028f861abb6c984acb5f5ef5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#adad2a52028f861abb6c984acb5f5ef5f">insertTask</a> (const std::shared_ptr&lt; <a class="el" href="classTask.html">Task</a> &gt; &amp;task)</td></tr>
+<tr class="memdesc:adad2a52028f861abb6c984acb5f5ef5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Beilleszt egy folyamatot menedzseltek közé.  <a href="classServer.html#adad2a52028f861abb6c984acb5f5ef5f">Részletek...</a><br /></td></tr>
+<tr class="separator:adad2a52028f861abb6c984acb5f5ef5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be781c156cdb464e1a7b8c25c6bdac1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a2be781c156cdb464e1a7b8c25c6bdac1">removeTask</a> (int pid)</td></tr>
+<tr class="memdesc:a2be781c156cdb464e1a7b8c25c6bdac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eltávolít egy folyamatot a PID-je alapján.  <a href="classServer.html#a2be781c156cdb464e1a7b8c25c6bdac1">Részletek...</a><br /></td></tr>
+<tr class="separator:a2be781c156cdb464e1a7b8c25c6bdac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40cff68f94477387abad8ff4f31434be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a40cff68f94477387abad8ff4f31434be">runTask</a> ()</td></tr>
+<tr class="memdesc:a40cff68f94477387abad8ff4f31434be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Futtatja a minimális vruntime-al rendelkező folyamatot.  <a href="classServer.html#a40cff68f94477387abad8ff4f31434be">Részletek...</a><br /></td></tr>
+<tr class="separator:a40cff68f94477387abad8ff4f31434be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507df8935aa1332d8b8d657fd7455ed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a507df8935aa1332d8b8d657fd7455ed8">updateOwners</a> ()</td></tr>
+<tr class="memdesc:a507df8935aa1332d8b8d657fd7455ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frissíti a folyamatok csomópontjait törlés után.  <a href="classServer.html#a507df8935aa1332d8b8d657fd7455ed8">Részletek...</a><br /></td></tr>
+<tr class="separator:a507df8935aa1332d8b8d657fd7455ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Privát attribútumok</h2></td></tr>
+<tr class="memitem:ad9c513cf472da077f8095596f1b64523"><td class="memItemLeft" align="right" valign="top"><a id="ad9c513cf472da077f8095596f1b64523"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#ad9c513cf472da077f8095596f1b64523">pidCount</a></td></tr>
+<tr class="memdesc:ad9c513cf472da077f8095596f1b64523"><td class="mdescLeft">&#160;</td><td class="mdescRight">A már inicializált PID-eket számolja. <br /></td></tr>
+<tr class="separator:ad9c513cf472da077f8095596f1b64523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac939dcfafe38bfdcf52a2d4d0d3ee789"><td class="memItemLeft" align="right" valign="top"><a id="ac939dcfafe38bfdcf52a2d4d0d3ee789"></a>
+std::mutex *&#160;</td><td class="memItemRight" valign="bottom"><b>mutex</b></td></tr>
+<tr class="separator:ac939dcfafe38bfdcf52a2d4d0d3ee789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7709efcc117c9547a506abac2789398e"><td class="memItemLeft" align="right" valign="top"><a id="a7709efcc117c9547a506abac2789398e"></a>
+<a class="el" href="structMessage.html">Message</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a7709efcc117c9547a506abac2789398e">message</a></td></tr>
+<tr class="memdesc:a7709efcc117c9547a506abac2789398e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az éppen feldolgozandó üzenet. <br /></td></tr>
+<tr class="separator:a7709efcc117c9547a506abac2789398e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad913b618d2943986e134e905ac64e590"><td class="memItemLeft" align="right" valign="top"><a id="ad913b618d2943986e134e905ac64e590"></a>
+io_context&#160;</td><td class="memItemRight" valign="bottom"><b>context</b></td></tr>
+<tr class="separator:ad913b618d2943986e134e905ac64e590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ca4f26654dc49de262be018c08929c"><td class="memItemLeft" align="right" valign="top"><a id="a65ca4f26654dc49de262be018c08929c"></a>
+udp::endpoint&#160;</td><td class="memItemRight" valign="bottom"><b>receiver</b></td></tr>
+<tr class="separator:a65ca4f26654dc49de262be018c08929c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bc6e180b995cb0ba95d72cee8fe742"><td class="memItemLeft" align="right" valign="top"><a id="a39bc6e180b995cb0ba95d72cee8fe742"></a>
+udp::socket&#160;</td><td class="memItemRight" valign="bottom"><b>serverSocket</b></td></tr>
+<tr class="separator:a39bc6e180b995cb0ba95d72cee8fe742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6721fea77106ac870136ca53577164da"><td class="memItemLeft" align="right" valign="top"><a id="a6721fea77106ac870136ca53577164da"></a>
+mutable_buffer&#160;</td><td class="memItemRight" valign="bottom"><b>buffer</b></td></tr>
+<tr class="separator:a6721fea77106ac870136ca53577164da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae487d6c751018009c4af867f322e9b86"><td class="memItemLeft" align="right" valign="top"><a id="ae487d6c751018009c4af867f322e9b86"></a>
+err_code&#160;</td><td class="memItemRight" valign="bottom"><b>ec</b></td></tr>
+<tr class="separator:ae487d6c751018009c4af867f322e9b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65941066c8e77a4efc1816685a29645"><td class="memItemLeft" align="right" valign="top"><a id="ab65941066c8e77a4efc1816685a29645"></a>
+<a class="el" href="classRbTree.html">RbTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>tree</b></td></tr>
+<tr class="separator:ab65941066c8e77a4efc1816685a29645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742901722f02b1747eab27b51c2112c6"><td class="memItemLeft" align="right" valign="top"><a id="a742901722f02b1747eab27b51c2112c6"></a>
+<a class="el" href="classDrawer.html">Drawer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>drawer</b></td></tr>
+<tr class="separator:a742901722f02b1747eab27b51c2112c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58b429eb72a48584f18ca2a67e0e4e5"><td class="memItemLeft" align="right" valign="top"><a id="ad58b429eb72a48584f18ca2a67e0e4e5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>shouldRun</b></td></tr>
+<tr class="separator:ad58b429eb72a48584f18ca2a67e0e4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089dc319375a5e201df9f0f98ef2859a"><td class="memItemLeft" align="right" valign="top"><a id="a089dc319375a5e201df9f0f98ef2859a"></a>
+std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="classTask.html">Task</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServer.html#a089dc319375a5e201df9f0f98ef2859a">tasks</a></td></tr>
+<tr class="memdesc:a089dc319375a5e201df9f0f98ef2859a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A szerver által menedzselt feladatok. <br /></td></tr>
+<tr class="separator:a089dc319375a5e201df9f0f98ef2859a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Részletes leírás</h2>
+<div class="textblock"><p>A folyamatokat kezelő, vizualizációt feladatfuttatással összekötő szerver. </p>
+</div><h2 class="groupheader">Tagfüggvények dokumentációja</h2>
+<a id="adad2a52028f861abb6c984acb5f5ef5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adad2a52028f861abb6c984acb5f5ef5f">&#9670;&nbsp;</a></span>insertTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::insertTask </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classTask.html">Task</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Beilleszt egy folyamatot menedzseltek közé. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>A beillesztendő feladatot kezelő mutató </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2be781c156cdb464e1a7b8c25c6bdac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2be781c156cdb464e1a7b8c25c6bdac1">&#9670;&nbsp;</a></span>removeTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::removeTask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Eltávolít egy folyamatot a PID-je alapján. </p>
+<p>A függvény megkeresi a tasks hasítótáblában a folyamatot, majd pedig eltávolítja a piros-fekete fából is.</p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pid</td><td>A folyamat Process ID-ja </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40cff68f94477387abad8ff4f31434be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40cff68f94477387abad8ff4f31434be">&#9670;&nbsp;</a></span>runTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::runTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Futtatja a minimális vruntime-al rendelkező folyamatot. </p>
+<p>A függvény az rbTree popMin metódusát felhasználva megkapja a minimális vruntime-al rendelkező folyamatot, majd pedig "futtatja" --&gt; A task pTime változó ideéig sleepel a folyamatot futtató thread. </p>
+
+</div>
+</div>
+<a id="a507df8935aa1332d8b8d657fd7455ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507df8935aa1332d8b8d657fd7455ed8">&#9670;&nbsp;</a></span>updateOwners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::updateOwners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Frissíti a folyamatok csomópontjait törlés után. </p>
+<p>Ez a függvény egy szükségszerű megoldás arra az eshetőségre, mikor a fából való törlés a másoló módszer alapján dolgozik: ilyenkor egy <a class="el" href="classTask.html" title="Egy Unix process megtestesitője.">Task</a> struktúra treeNode pointere olyan csomópontra mutathat, ami már esetleg törölve volt. </p>
+
+</div>
+</div>
+<hr/>Ez a dokumentáció az osztályról a következő fájl alapján készült:<ul>
+<li>headers/<a class="el" href="server_8hpp_source.html">server.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

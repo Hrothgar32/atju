@@ -1,0 +1,114 @@
+\hypertarget{classDrawer}{}\doxysection{Drawer osztályreferencia}
+\label{classDrawer}\index{Drawer@{Drawer}}
+
+
+Az információk megjelenítésért felelős osztály.  
+
+
+
+
+{\ttfamily \#include $<$drawer.\+hpp$>$}
+
+\doxysubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDrawer_a2c30be0404c5ffeed592c09b79f8e4a2}\label{classDrawer_a2c30be0404c5ffeed592c09b79f8e4a2}} 
+{\bfseries Drawer} (\mbox{\hyperlink{classRbTree}{Rb\+Tree}} $\ast$tree, std\+::mutex $\ast$mutex)
+\item 
+\mbox{\Hypertarget{classDrawer_ac6584ca523b11b7d817da004efd299fe}\label{classDrawer_ac6584ca523b11b7d817da004efd299fe}} 
+void \mbox{\hyperlink{classDrawer_ac6584ca523b11b7d817da004efd299fe}{init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializálja a rajzolási felületet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDrawer_a6b890c3baa31c3734230247d9b41c68e}{draw\+Runnable}} ()
+\begin{DoxyCompactList}\small\item\em A rajzolást vezérlő runnable függvény. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDrawer_a8efd0688010ac86811dfe3de41b8dfb8}\label{classDrawer_a8efd0688010ac86811dfe3de41b8dfb8}} 
+void \mbox{\hyperlink{classDrawer_a8efd0688010ac86811dfe3de41b8dfb8}{disable\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Megállítja a rajzolási folyamatot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDrawer_ac2135026e8e98ec03efd5698a4938d1f}\label{classDrawer_ac2135026e8e98ec03efd5698a4938d1f}} 
+void \mbox{\hyperlink{classDrawer_ac2135026e8e98ec03efd5698a4938d1f}{call\+Re\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em Újrarajzolja a piros-\/fekete fa állapotát. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDrawer_a5f00ed0d7eb4e0c23ba9eae02b951658}\label{classDrawer_a5f00ed0d7eb4e0c23ba9eae02b951658}} 
+void \mbox{\hyperlink{classDrawer_a5f00ed0d7eb4e0c23ba9eae02b951658}{set\+Running\+Task}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTask}{Task}} $>$ \mbox{\hyperlink{classDrawer_a7ebeed4805ea83c3bf7bd1e8ad777369}{current\+Task}})
+\begin{DoxyCompactList}\small\item\em Beállítja az éppen futó folyamatot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Privát tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDrawer_a3fb31f7236333f3e387d7d83bccf9866}{draw}} ()
+\begin{DoxyCompactList}\small\item\em A rajzolómetódus. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDrawer_abaf5948c6b5b165c326d501ee6e1554a}{tree\+CTo\+GraphicsC}} (almtree\+::\+COLOR color)
+\begin{DoxyCompactList}\small\item\em Átkonvertálja az almtree névtérben levő színt a graphics.\+h színére. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Privát attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDrawer_ade14699c59816e5c91358a2deba7ab10}\label{classDrawer_ade14699c59816e5c91358a2deba7ab10}} 
+\mbox{\hyperlink{classRbTree}{Rb\+Tree}} $\ast$ {\bfseries tree}
+\item 
+\mbox{\Hypertarget{classDrawer_a7714c647b1aea52803f59e1fa6329a71}\label{classDrawer_a7714c647b1aea52803f59e1fa6329a71}} 
+std\+::mutex $\ast$ {\bfseries mutex}
+\item 
+\mbox{\Hypertarget{classDrawer_a7ebeed4805ea83c3bf7bd1e8ad777369}\label{classDrawer_a7ebeed4805ea83c3bf7bd1e8ad777369}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTask}{Task}} $>$ \mbox{\hyperlink{classDrawer_a7ebeed4805ea83c3bf7bd1e8ad777369}{current\+Task}}
+\begin{DoxyCompactList}\small\item\em Az éppen háttérben futó folyamat. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDrawer_ad3bf11f3a23e4d385985e91df1d79560}\label{classDrawer_ad3bf11f3a23e4d385985e91df1d79560}} 
+int {\bfseries gd}
+\item 
+\mbox{\Hypertarget{classDrawer_a00efd1b6f828fc3fa7918d763a78ba25}\label{classDrawer_a00efd1b6f828fc3fa7918d763a78ba25}} 
+int {\bfseries gm}
+\item 
+\mbox{\Hypertarget{classDrawer_a6ca61cdbdd9993bc645caf1bcea444a6}\label{classDrawer_a6ca61cdbdd9993bc645caf1bcea444a6}} 
+int {\bfseries window}
+\item 
+\mbox{\Hypertarget{classDrawer_a2d726130e15f59611926bc0afdda3b6f}\label{classDrawer_a2d726130e15f59611926bc0afdda3b6f}} 
+bool {\bfseries should\+Draw}
+\item 
+\mbox{\Hypertarget{classDrawer_a41aec33384a62b0b5483f1775858b85e}\label{classDrawer_a41aec33384a62b0b5483f1775858b85e}} 
+bool {\bfseries re\+Draw}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+Az információk megjelenítésért felelős osztály. 
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\mbox{\Hypertarget{classDrawer_a3fb31f7236333f3e387d7d83bccf9866}\label{classDrawer_a3fb31f7236333f3e387d7d83bccf9866}} 
+\index{Drawer@{Drawer}!draw@{draw}}
+\index{draw@{draw}!Drawer@{Drawer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Drawer\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A rajzolómetódus. 
+
+Lerajzolja a piros-\/fekete aktuális állapotát jelezve a csomópontokban az eltelt időt amennyit futott a jelzett folyamat, és a folyamat PID-\/jét. A képernyő alján ugyanakkor kiírja, hogy éppen melyik folyamat fut. \mbox{\Hypertarget{classDrawer_a6b890c3baa31c3734230247d9b41c68e}\label{classDrawer_a6b890c3baa31c3734230247d9b41c68e}} 
+\index{Drawer@{Drawer}!drawRunnable@{drawRunnable}}
+\index{drawRunnable@{drawRunnable}!Drawer@{Drawer}}
+\doxysubsubsection{\texorpdfstring{drawRunnable()}{drawRunnable()}}
+{\footnotesize\ttfamily void Drawer\+::draw\+Runnable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A rajzolást vezérlő runnable függvény. 
+
+Addig fut, amíg a should\+Draw változó értéke true. Akkor rajzoltat, ha a re\+Draw értéke true. \mbox{\Hypertarget{classDrawer_abaf5948c6b5b165c326d501ee6e1554a}\label{classDrawer_abaf5948c6b5b165c326d501ee6e1554a}} 
+\index{Drawer@{Drawer}!treeCToGraphicsC@{treeCToGraphicsC}}
+\index{treeCToGraphicsC@{treeCToGraphicsC}!Drawer@{Drawer}}
+\doxysubsubsection{\texorpdfstring{treeCToGraphicsC()}{treeCToGraphicsC()}}
+{\footnotesize\ttfamily int Drawer\+::tree\+CTo\+GraphicsC (\begin{DoxyParamCaption}\item[{almtree\+::\+COLOR}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Átkonvertálja az almtree névtérben levő színt a graphics.\+h színére. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em color} & Egy szín az almtree névtérből (vagy piros vagy fekete). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+A graphics.\+h COLOR enumjának egy tagja (vagy piros vagy fekete). 
+\end{DoxyReturn}
+
+
+Ez a dokumentáció az osztályról a következő fájl alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+headers/drawer.\+hpp\end{DoxyCompactItemize}

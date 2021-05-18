@@ -1,0 +1,286 @@
+\hypertarget{classRbTree}{}\doxysection{Rb\+Tree osztályreferencia}
+\label{classRbTree}\index{RbTree@{RbTree}}
+
+
+Nagyjából standard és általános piros-\/fekete fa implementáció.  
+
+
+
+
+{\ttfamily \#include $<$rbtree.\+hpp$>$}
+
+\doxysubsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{classRbTree_ae5c884f1001bf141205dddd88b2784b5}{rb\+Insert}} (const int \&key)
+\begin{DoxyCompactList}\small\item\em Behelyez egy új csomópontot a piros-\/fekete fába, és frissíti a minimális csomópontot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRbTree_ae3cec7d854595ed272b928c8925e83d8}{rb\+Delete}} (\mbox{\hyperlink{structNode}{Node}} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Kivesz egy csomópontot a piros-\/fekete fából. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structNode}{Node}} $\ast$ $>$ \mbox{\hyperlink{classRbTree_ab484abeed688e37817aeabba00f68df5}{get\+Level\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Visszatéríti a fa csomópontjait szint szerinti sorrendben. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{classRbTree_a13b8246c85f945f3331f18f2cbbe477e}{get\+Root}} ()
+\begin{DoxyCompactList}\small\item\em Visszatéríti a piros-\/fekete fa gyökerét. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{classRbTree_ae6ab3001f76f3d47651ec85616ff3c21}{search}} (const int \&key)
+\begin{DoxyCompactList}\small\item\em Visszatéríti a fa \char`\"{}key\char`\"{} kulcsú csomópontját, ha létezik. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ void $>$ \mbox{\hyperlink{classRbTree_a69e29c3383c7bba70b23db68bd781c39}{pop\+Min}} ()
+\begin{DoxyCompactList}\small\item\em Kitörli a minimális csomópontot, és visszatéríti a benne levő adatot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Privát tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{classRbTree_a06f836aec3409798eaaafb462c18bb59}{insert}} (\mbox{\hyperlink{structNode}{Node}} $\ast$root, \mbox{\hyperlink{structNode}{Node}} $\ast$new\+Node)
+\begin{DoxyCompactList}\small\item\em Privát rekurzív bináris keresőfa beszúrás. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRbTree_a0231fdefa41bdb4e5c3c8efeb705e206}{fix\+Tree\+After\+Insert}} (\mbox{\hyperlink{structNode}{Node}} $\ast$\&root, \mbox{\hyperlink{structNode}{Node}} $\ast$new\+Node)
+\begin{DoxyCompactList}\small\item\em Kijavítja beszúrás után a piros-\/fekete tulajdonságot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRbTree_a765e2187f5e19425d69fe88a5c01eecb}{rotate\+Left}} (\mbox{\hyperlink{structNode}{Node}} $\ast$\&root, \mbox{\hyperlink{structNode}{Node}} $\ast$\&node\+Ptr)
+\begin{DoxyCompactList}\small\item\em Végrehajt egy bal forgatást a megadott csomóponton. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRbTree_ac74c92cd12cd6001ac9bea0b932e2a0a}{rotate\+Right}} (\mbox{\hyperlink{structNode}{Node}} $\ast$\&root, \mbox{\hyperlink{structNode}{Node}} $\ast$\&node\+Ptr)
+\begin{DoxyCompactList}\small\item\em Végrehajt egy jobb forgatást a megadott csomóponton. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{classRbTree_a2a4c3da0ceede65bcf9ad79243ba9d7c}{replacement\+Search}} (\mbox{\hyperlink{structNode}{Node}} $\ast$x)
+\begin{DoxyCompactList}\small\item\em Megkeresi az x csomópont utódját BST törlés esetén. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{classRbTree_a13620af05da75142d0932fbacea665cd}{successor}} (\mbox{\hyperlink{structNode}{Node}} $\ast$x)
+\begin{DoxyCompactList}\small\item\em Visszatéríti az x csomópont által jelzett al-\/fa legkisebb elemét. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRbTree_af2e0bccbdbf7c4ac0d6772ed265e9679}{fix\+Double\+Black}} (\mbox{\hyperlink{structNode}{Node}} $\ast$x)
+\begin{DoxyCompactList}\small\item\em Kijavítja a megadott x csúcs \char`\"{}duplafeketeségét\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Privát attribútumok}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRbTree_a66aa50541f8478c3c2fbc514c7cb184e}\label{classRbTree_a66aa50541f8478c3c2fbc514c7cb184e}} 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ {\bfseries root}
+\item 
+\mbox{\Hypertarget{classRbTree_aa2cb52bf609a921b1a64891155f3590c}\label{classRbTree_aa2cb52bf609a921b1a64891155f3590c}} 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ {\bfseries min\+Node}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Részletes leírás}
+Nagyjából standard és általános piros-\/fekete fa implementáció. 
+
+\doxysubsection{Tagfüggvények dokumentációja}
+\mbox{\Hypertarget{classRbTree_af2e0bccbdbf7c4ac0d6772ed265e9679}\label{classRbTree_af2e0bccbdbf7c4ac0d6772ed265e9679}} 
+\index{RbTree@{RbTree}!fixDoubleBlack@{fixDoubleBlack}}
+\index{fixDoubleBlack@{fixDoubleBlack}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{fixDoubleBlack()}{fixDoubleBlack()}}
+{\footnotesize\ttfamily void Rb\+Tree\+::fix\+Double\+Black (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Kijavítja a megadott x csúcs \char`\"{}duplafeketeségét\char`\"{}. 
+
+A dupla-\/fekete javításnál főleg a testvér színét figyeljük. a) Ha a testvér fekete, és van legalább egy piros gyermeke, akkor maximum két forgatással ki lehet javítani a fekete magasságot. b) Ha a testvér fekete és mindkét gyermeke fekete, akkor átszínezzük a testvért pirosra, a szülőt feketére, s ha a szülő duplafekete lesz, meghívjuk rá is a függvényt. c) Ha a testvér piros, akkor átszínezzük feketére, a szülőt pirosra, forgatunk egyet a szülőn attól függően, hogy hol van a testvér, és visszatérünk az a) vagy b) esetre.
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em x} & A csúcs amit \char`\"{}megjavítunk\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRbTree_a0231fdefa41bdb4e5c3c8efeb705e206}\label{classRbTree_a0231fdefa41bdb4e5c3c8efeb705e206}} 
+\index{RbTree@{RbTree}!fixTreeAfterInsert@{fixTreeAfterInsert}}
+\index{fixTreeAfterInsert@{fixTreeAfterInsert}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{fixTreeAfterInsert()}{fixTreeAfterInsert()}}
+{\footnotesize\ttfamily void Rb\+Tree\+::fix\+Tree\+After\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{root,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{new\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Kijavítja beszúrás után a piros-\/fekete tulajdonságot. 
+
+A kijavítási folyamat tartalmazhat forgatásokat és átszínezéseket, és rotációkat. Mivel minden beszúrt új csomópont piros, ezért leredukálható a probléma az egymást követő piros eset kijavítására. Ha a nagybácsi (a new\+Node szülőjének testvére) piros, akkor egyszerűen a szülő s a nagybácsi színét feketére állítjuk és a nagyszülőjét pedig pirosra. Fekete esetben 4 eset fordulhat elő\+:
+\begin{DoxyEnumerate}
+\item Bal-\/bal(a szülő a nagyszülő bal gyermeke és a new\+Node a szülő bal gyermeke)\+: Végrehajtunk egy jobb forgatást a nagyszülőn, kicseréljük a szülő és nagyszülő színét.
+\item Bal-\/jobb\+: Végrehajtunk egy bal forgatást a szülőn, ezután visszatértünk a bal-\/bal esethez.
+\item Jobb-\/jobb\+: Végrehajtunk egy bal forgatást a nagyszülőn, kicseréljük a szülő és a nagyszülő színét.
+\item Jobb-\/bal\+: Végrehajtunk egy jobb forgatást a szülőn, ezután visszatértünk a jobb-\/jobb esethez. A fenti eseteket addig folytatjuk, amíg a new\+Node paraméter fekete nem lesz, vagy pedig a szülő fekete lesz.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em root} & A fa gyökere \\
+\hline
+{\em new\+Node} & Az új beszúrt csomópont. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRbTree_ab484abeed688e37817aeabba00f68df5}\label{classRbTree_ab484abeed688e37817aeabba00f68df5}} 
+\index{RbTree@{RbTree}!getLevelOrder@{getLevelOrder}}
+\index{getLevelOrder@{getLevelOrder}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{getLevelOrder()}{getLevelOrder()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structNode}{Node}}$\ast$$>$ Rb\+Tree\+::get\+Level\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Visszatéríti a fa csomópontjait szint szerinti sorrendben. 
+
+A get\+Level\+Order függvény egy várakozási sor segítségével bejárja a piros-\/fekete fát, szintről-\/szintre haladva.
+
+\begin{DoxyReturn}{Visszatérési érték}
+A fa csomópontjait tartalmazó vektor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRbTree_a13b8246c85f945f3331f18f2cbbe477e}\label{classRbTree_a13b8246c85f945f3331f18f2cbbe477e}} 
+\index{RbTree@{RbTree}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ Rb\+Tree\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Visszatéríti a piros-\/fekete fa gyökerét. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+A fa gyökerét tartalmazó csomópont. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRbTree_a06f836aec3409798eaaafb462c18bb59}\label{classRbTree_a06f836aec3409798eaaafb462c18bb59}} 
+\index{RbTree@{RbTree}!insert@{insert}}
+\index{insert@{insert}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ Rb\+Tree\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{root,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{new\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Privát rekurzív bináris keresőfa beszúrás. 
+
+A szülőt azért térítjük vissza, hogy meg tudjuk hívni a piros-\/fekete tulajdonság kijavítására szolgáló fix\+Tree\+After\+Insert függvényt.
+
+\begin{DoxyReturn}{Visszatérési érték}
+Visszatéríti az újonnan beszúrt csomópont szülőjét. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRbTree_a69e29c3383c7bba70b23db68bd781c39}\label{classRbTree_a69e29c3383c7bba70b23db68bd781c39}} 
+\index{RbTree@{RbTree}!popMin@{popMin}}
+\index{popMin@{popMin}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{popMin()}{popMin()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$void$>$ Rb\+Tree\+::pop\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kitörli a minimális csomópontot, és visszatéríti a benne levő adatot. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+A csomópontban levő adatra mutató megosztott mutató. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRbTree_ae3cec7d854595ed272b928c8925e83d8}\label{classRbTree_ae3cec7d854595ed272b928c8925e83d8}} 
+\index{RbTree@{RbTree}!rbDelete@{rbDelete}}
+\index{rbDelete@{rbDelete}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{rbDelete()}{rbDelete()}}
+{\footnotesize\ttfamily void Rb\+Tree\+::rb\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Kivesz egy csomópontot a piros-\/fekete fából. 
+
+Először kitörli egy standard BST törléssel, utána pedig, ha fennáll az eset, kijavítja a dupla fekete hibát a fix\+Double\+Black függvénnyel. Hívjuk v-\/nek a törölt csúcsot és u-\/nak a csúcsot, amivel lecseréljük ezt a törölt csúcsot. A legegyszerűbb eset akkor áll fenn, ha vagy u vagy v piros, ekkor egyszerűen az u csúcsot átszínezzük pirosra. Ha mindkettő csúcs fekete, akkor törlés után (vagy előtt, ha a leváltó nullptr) meghívjuk a fix\+Double\+Black függvényt.
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em node} & A törlendő csomópontra mutató pointer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRbTree_ae5c884f1001bf141205dddd88b2784b5}\label{classRbTree_ae5c884f1001bf141205dddd88b2784b5}} 
+\index{RbTree@{RbTree}!rbInsert@{rbInsert}}
+\index{rbInsert@{rbInsert}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{rbInsert()}{rbInsert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ Rb\+Tree\+::rb\+Insert (\begin{DoxyParamCaption}\item[{const int \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Behelyez egy új csomópontot a piros-\/fekete fába, és frissíti a minimális csomópontot. 
+
+Az rb\+Insert függvény először létrehoz egy új csomópontot, majd végrehajt egy standard bináris-\/keresőfa beszúrást az insert metódussal. utána pedig (ha szükséges) kijavítja az esetleges piros-\/fekete tulajdonság megsértését a fix\+Tree\+After\+Insert privát metódussal.
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em key} & A kulcs, ami alapjan el lesz rendezve a csomópont a keresőfában.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Az újonnan létrehozott csomópont. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRbTree_a2a4c3da0ceede65bcf9ad79243ba9d7c}\label{classRbTree_a2a4c3da0ceede65bcf9ad79243ba9d7c}} 
+\index{RbTree@{RbTree}!replacementSearch@{replacementSearch}}
+\index{replacementSearch@{replacementSearch}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{replacementSearch()}{replacementSearch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ Rb\+Tree\+::replacement\+Search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Megkeresi az x csomópont utódját BST törlés esetén. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em x} & A csomópont aminek a \char`\"{}leváltóját\char`\"{} keressük. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Az x csomópont \char`\"{}leváltója\char`\"{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRbTree_a765e2187f5e19425d69fe88a5c01eecb}\label{classRbTree_a765e2187f5e19425d69fe88a5c01eecb}} 
+\index{RbTree@{RbTree}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily void Rb\+Tree\+::rotate\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{root,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{node\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Végrehajt egy bal forgatást a megadott csomóponton. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em root} & A fa gyökere. \\
+\hline
+{\em node\+Ptr} & A \char`\"{}megforgatott\char`\"{} csomópont. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRbTree_ac74c92cd12cd6001ac9bea0b932e2a0a}\label{classRbTree_ac74c92cd12cd6001ac9bea0b932e2a0a}} 
+\index{RbTree@{RbTree}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily void Rb\+Tree\+::rotate\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{root,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$\&}]{node\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Végrehajt egy jobb forgatást a megadott csomóponton. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em root} & A fa gyökere. \\
+\hline
+{\em node\+Ptr} & A \char`\"{}megforgatott\char`\"{} csomópont. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRbTree_ae6ab3001f76f3d47651ec85616ff3c21}\label{classRbTree_ae6ab3001f76f3d47651ec85616ff3c21}} 
+\index{RbTree@{RbTree}!search@{search}}
+\index{search@{search}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ Rb\+Tree\+::search (\begin{DoxyParamCaption}\item[{const int \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Visszatéríti a fa \char`\"{}key\char`\"{} kulcsú csomópontját, ha létezik. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em key} & A keresett csomópont kulcsa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+A kulcsot tartalmazó csomópont, másképp egy nullptr. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRbTree_a13620af05da75142d0932fbacea665cd}\label{classRbTree_a13620af05da75142d0932fbacea665cd}} 
+\index{RbTree@{RbTree}!successor@{successor}}
+\index{successor@{successor}!RbTree@{RbTree}}
+\doxysubsubsection{\texorpdfstring{successor()}{successor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ Rb\+Tree\+::successor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Visszatéríti az x csomópont által jelzett al-\/fa legkisebb elemét. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em x} & Az x csomópont. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Az al-\/fa legbaloldalibb vagy legkisebb nem-\/nullptr eleme. 
+\end{DoxyReturn}
+
+
+Ez a dokumentáció az osztályról a következő fájl alapján készült\+:\begin{DoxyCompactItemize}
+\item 
+headers/rbtree.\+hpp\end{DoxyCompactItemize}
