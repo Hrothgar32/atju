@@ -31,6 +31,8 @@
 
   \item {insert}
     \subitem {RbTree}, \hyperpage{12}
+  \item {insertTask}
+    \subitem {Server}, \hyperpage{17}
   \item {isOnLeft}
     \subitem {Node}, \hyperpage{9}
 
@@ -69,18 +71,26 @@
     \subitem {rotateRight}, \hyperpage{15}
     \subitem {search}, \hyperpage{15}
     \subitem {successor}, \hyperpage{15}
+  \item {removeTask}
+    \subitem {Server}, \hyperpage{17}
   \item {replacementSearch}
     \subitem {RbTree}, \hyperpage{14}
   \item {rotateLeft}
     \subitem {RbTree}, \hyperpage{14}
   \item {rotateRight}
     \subitem {RbTree}, \hyperpage{15}
+  \item {runTask}
+    \subitem {Server}, \hyperpage{17}
 
   \indexspace
 
   \item {search}
     \subitem {RbTree}, \hyperpage{15}
   \item {Server}, \hyperpage{16}
+    \subitem {insertTask}, \hyperpage{17}
+    \subitem {removeTask}, \hyperpage{17}
+    \subitem {runTask}, \hyperpage{17}
+    \subitem {updateOwners}, \hyperpage{17}
   \item {sibling}
     \subitem {Node}, \hyperpage{10}
   \item {successor}
@@ -88,8 +98,13 @@
 
   \indexspace
 
-  \item {Task}, \hyperpage{17}
+  \item {Task}, \hyperpage{18}
   \item {treeCToGraphicsC}
     \subitem {Drawer}, \hyperpage{8}
+
+  \indexspace
+
+  \item {updateOwners}
+    \subitem {Server}, \hyperpage{17}
 
 \end{theindex}

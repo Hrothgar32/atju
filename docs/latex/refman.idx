@@ -40,4 +40,12 @@
 \indexentry{RbTree@{RbTree}!successor@{successor}|hyperpage}{15}
 \indexentry{successor@{successor}!RbTree@{RbTree}|hyperpage}{15}
 \indexentry{Server@{Server}|hyperpage}{16}
-\indexentry{Task@{Task}|hyperpage}{17}
+\indexentry{Server@{Server}!insertTask@{insertTask}|hyperpage}{17}
+\indexentry{insertTask@{insertTask}!Server@{Server}|hyperpage}{17}
+\indexentry{Server@{Server}!removeTask@{removeTask}|hyperpage}{17}
+\indexentry{removeTask@{removeTask}!Server@{Server}|hyperpage}{17}
+\indexentry{Server@{Server}!runTask@{runTask}|hyperpage}{17}
+\indexentry{runTask@{runTask}!Server@{Server}|hyperpage}{17}
+\indexentry{Server@{Server}!updateOwners@{updateOwners}|hyperpage}{17}
+\indexentry{updateOwners@{updateOwners}!Server@{Server}|hyperpage}{17}
+\indexentry{Task@{Task}|hyperpage}{18}
